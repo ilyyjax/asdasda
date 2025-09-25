@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  background: linear-gradient(to top, #87ceeb 0%, #e0f7fa 100%);
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#scoreboard h1 {
+  font-size: 3em;
+  color: #ff5e5e;
+  text-shadow: 2px 2px #ffe066;
+}
+
+#scoreboard p, #scoreboard label {
+  font-size: 1.5em;
+}
+
+#game-area {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  margin: 20px auto;
+  border: 5px solid #ff5e5e;
+  border-radius: 20px;
+  background: linear-gradient(to top, #a0e7e5, #b4f8c8);
+  overflow: hidden;
+}
+
+#pickle {
+  width: 50px;
+  height: 80px;
+  background: #9bff00;
+  border-radius: 50% / 20%;
+  position: absolute;
+  left: 275px;
+  transform-origin: center bottom;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+/* Clouds */
+.cloud {
+  width: 80px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Birds */
+.bird {
+  width: 30px;
+  height: 30px;
+  background: #ff9900;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Particle effect */
+.particle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background: gold;
+  pointer-events: none;
+  opacity: 1;
+  animation: particleFade 0.8s forwards;
+}
+
+@keyframes particleFade {
+  0% { transform: translateY(0) scale(1); opacity:1; }
+  100% { transform: translateY(-50px) scale(0.5); opacity:0; }
+}
+
+.instructions {
+  font-size: 1.2em;
+  color: #555;
+  text-shadow: 1px 1px #fff;
+}
